@@ -30,6 +30,9 @@
       "^.+\\.(js|jsx)$": "babel-jest"
     },
     "moduleFileExtensions": ["js", "jsx"],
-    "testMatch": ["**/*.test.jsx"]
+    "testMatch": ["**/*.test.jsx"],
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
