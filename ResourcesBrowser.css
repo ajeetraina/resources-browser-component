@@ -1,0 +1,258 @@
+.resources-browser {
+  display: flex;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-right: 1px solid #e0e0e0;
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar h2 {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.filter-section {
+  margin-bottom: 24px;
+}
+
+.filter-section label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.filter-section input[type="text"],
+.filter-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filter-section input[type="text"]:focus,
+.filter-section select:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.reset-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #e0e0e0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.content-header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #333;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sort-controls label {
+  font-size: 14px;
+  color: #666;
+}
+
+.sort-controls select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.results-count {
+  margin-bottom: 24px;
+  color: #666;
+  font-size: 14px;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.resource-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.resource-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.type-badge.white-paper {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.type-badge.infographic {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.type-badge.video {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+.year {
+  font-size: 14px;
+  color: #999;
+}
+
+.resource-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.resource-card p {
+  margin: 0 0 16px 0;
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.action-link {
+  display: inline-block;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.action-link:hover {
+  color: #004499;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.no-results p {
+  margin: 0 0 20px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.no-results button {
+  padding: 12px 24px;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.no-results button:hover {
+  background-color: #0052a3;
+}
